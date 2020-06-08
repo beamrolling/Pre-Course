@@ -8,10 +8,6 @@ public class BackstagePass extends Goods {
 
         if(this.getSellIn() < 0) {
             this.setQuality(0);
-        }else if(this.getSellIn() > 10) {
-            if(this.getQuality() < 50) {
-                this.setQuality(this.getQuality()+1);
-            }
         }
     }
 }
