@@ -7,5 +7,9 @@ public class Normal extends Goods {
         if(this.getQuality() == 0) {
             this.setSellIn(this.getSellIn()-1);
         }
+        if(this.getQuality() > 0) {
+            this.setSellIn(this.getSellIn()-1);
+            this.setQuality(this.getQuality()-1);
+        }
     }
 }

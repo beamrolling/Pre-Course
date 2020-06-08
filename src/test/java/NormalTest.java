@@ -16,4 +16,12 @@ public class NormalTest {
         assertEquals(normal.getSellIn(),4);
         assertEquals(normal.getQuality(),0);
     }
+
+    @Test
+    public void should_subtract_one_when_quality_greater_than_zero_and_sellin_greater_than_zero() throws Exception {
+        Normal normal = new Normal(5,3);
+        normal.refresh();
+        assertEquals(normal.getSellIn(),4);
+        assertEquals(normal.getQuality(),2);
+    }
 }
