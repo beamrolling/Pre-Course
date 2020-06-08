@@ -13,12 +13,16 @@ public class BackstagePass extends Goods {
                 this.setQuality(this.getQuality()+1);
             }
         } else if(this.getSellIn() > 5 && this.getSellIn() < 11) {
-            if(this.getQuality() == 49) {
+            if(this.getQuality() > 48) {
                 this.setQuality(50);
+            } else {
+                this.setQuality(this.getQuality()+2);
             }
         } else if(this.getSellIn() > -1 && this.getSellIn() < 6) {
             if(this.getQuality() > 47) {
                 this.setQuality(50);
+            } else {
+                this.setQuality(this.getQuality()+3);
             }
         }
     }

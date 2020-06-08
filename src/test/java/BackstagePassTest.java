@@ -52,4 +52,16 @@ public class BackstagePassTest {
         assertEquals(backstagePass1.getSellIn(),4);
         assertEquals(backstagePass1.getQuality(),50);
     }
+
+    @Test
+    public void should_add_velocity_() {
+        BackstagePass backstagePass = new BackstagePass(10,40);
+        backstagePass.refresh();
+        assertEquals(backstagePass.getSellIn(),9);
+        assertEquals(backstagePass.getQuality(),42);
+        BackstagePass backstagePass1 = new BackstagePass(5,40);
+        backstagePass1.refresh();
+        assertEquals(backstagePass1.getSellIn(),4);
+        assertEquals(backstagePass1.getQuality(),43);
+    }
 }
