@@ -4,11 +4,9 @@ public class Normal extends Goods {
     }
 
     public void refresh() {
-        if(this.getQuality() == 0) {
-            this.setSellIn(this.getSellIn()-1);
-        }
-        if(this.getQuality() > 0) {
-            this.setSellIn(this.getSellIn()-1);
+        this.setSellIn(this.getSellIn()-1);
+
+        if(this.getQuality() > 0 && this.getSellIn() > 0) {
             this.setQuality(this.getQuality()-1);
         }
     }
