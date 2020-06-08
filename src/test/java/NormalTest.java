@@ -8,4 +8,12 @@ public class NormalTest {
         assertEquals(normal.getSellIn(),1);
         assertEquals(normal.getQuality(),1);
     }
+
+    @Test
+    public void should_return_zero_when_quality_is_zero_and_sellin_greater_than_zero() throws Exception {
+        Normal normal = new Normal(5,0);
+        normal.refresh();
+        assertEquals(normal.getSellIn(),4);
+        assertEquals(normal.getQuality(),0);
+    }
 }
