@@ -28,4 +28,12 @@ public class NormalTest {
         assertEquals(normal.getSellIn(),4);
         assertEquals(normal.getQuality(),2);
     }
+
+    @Test
+    public void should_return_zero_when_quality_less_than_veloocity_and_sellin_less_than_zero() throws Exception {
+        Normal normal = new Normal(-1,1);
+        normal.refresh();;
+        assertEquals(normal.getSellIn(),-2);
+        assertEquals(normal.getQuality(),0);
+    }
 }
