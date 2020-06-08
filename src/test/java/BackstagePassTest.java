@@ -40,4 +40,12 @@ public class BackstagePassTest {
         assertEquals(sellInBetweenZeroAndFive.getSellIn(),4);
         assertEquals(sellInBetweenZeroAndFive.getQuality(),50);
     }
+
+    @Test
+    public void should_be_fifty_when_quality_greater_than_fifty_substract_value_and_sellin_between_six_and_ten() {
+        BackstagePass backstagePass = new BackstagePass(10,49);
+        backstagePass.refresh();
+        assertEquals(backstagePass.getSellIn(),9);
+        assertEquals(backstagePass.getQuality(),50);
+    }
 }
